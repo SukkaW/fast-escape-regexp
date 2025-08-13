@@ -30,14 +30,8 @@ export function escapeRegexp(str: string, unicodeMode = true) {
   for (const len = str.length; index < len; index++) {
     /* eslint-disable sukka/unicorn/prefer-string-raw -- performance */
     switch (str.charCodeAt(index)) {
-      case 92: // \
-        escape = '\\\\';
-        break;
-      case 94: // ^
+      case 94: // ^ // this almost happens first if there is any
         escape = '\\^';
-        break;
-      case 36: // $
-        escape = '\\$';
         break;
       case 46: // .
         escape = '\\.';
@@ -69,11 +63,17 @@ export function escapeRegexp(str: string, unicodeMode = true) {
       case 125: // }
         escape = '\\}';
         break;
+      case 92: // \
+        escape = '\\\\';
+        break;
       case 124: // |
         escape = '\\|';
         break;
       case 45: // -
         escape = unicodeEscapeForDash;
+        break;
+      case 36: // $ // this almost happens last if there is any
+        escape = '\\$';
         break;
       default:
         continue;
