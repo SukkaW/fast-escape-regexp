@@ -3,7 +3,7 @@
   "version": "0.0.1-beta.1",
   "description": "Fastest, plain JavaScript-based, HTML escaping library for JavaScript, works in both Node.js and browser.",
   "repository": {
-    "url": "https://github.com/SukkaW/regexp"
+    "url": "https://github.com/SukkaW/fast-escape-regexp"
   },
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
