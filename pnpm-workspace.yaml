@@ -1,0 +1,8 @@
+ignoredBuiltDependencies:
+  - unrs-resolver
+
+onlyBuiltDependencies:
+  - '@swc/core'
+
+overrides:
+  'eslint>chalk': 'npm:picocolors@^1.1.1'

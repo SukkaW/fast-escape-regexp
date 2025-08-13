@@ -1,0 +1,61 @@
+{
+  "name": "fast-escape-regexp",
+  "version": "0.0.0",
+  "description": "Fastest, plain JavaScript-based, HTML escaping library for JavaScript, works in both Node.js and browser.",
+  "repository": {
+    "url": "https://github.com/SukkaW/regexp"
+  },
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/es/index.mjs",
+  "types": "./dist/cjs/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/es/index.d.mts",
+        "default": "./dist/es/index.mjs"
+      },
+      "require": {
+        "types": "./dist/cjs/index.d.ts",
+        "default": "./dist/cjs/index.js"
+      }
+    }
+  },
+  "scripts": {
+    "lint": "eslint --format=sukka .",
+    "test": "SWC_NODE_IGNORE_DYNAMIC=1 SWC_NODE_PROJECT=tsconfig.test-swc.json nyc mocha --require @swc-node/register --full-trace ./src/**/*.test.ts",
+    "bench": "SWC_NODE_IGNORE_DYNAMIC=1 node --require @swc-node/register benchmark/index.ts",
+    "build": "bunchee --no-sourcemap",
+    "prerelease": "pnpm run lint && pnpm run test && pnpm run build",
+    "release": "bumpp -r --all --commit \"release: %s\" --tag \"%s\""
+  },
+  "keywords": [
+    "escape",
+    "escape-regexp",
+    "utility",
+    "escape-goat",
+    "regex",
+    "regexp"
+  ],
+  "author": "SukkaW <https://skk.moe>",
+  "license": "MIT",
+  "packageManager": "pnpm@10.14.0",
+  "devDependencies": {
+    "@istanbuljs/nyc-config-typescript": "^1.0.2",
+    "@mitata/counters": "^0.0.8",
+    "@swc-node/register": "^1.10.10",
+    "@types/mocha": "^10.0.10",
+    "bumpp": "^10.2.3",
+    "bunchee": "^6.6.0",
+    "eslint": "^9.33.0",
+    "eslint-config-sukka": "^6.23.1",
+    "eslint-formatter-sukka": "^6.23.1",
+    "expect": "^30.0.5",
+    "mitata": "^1.0.34",
+    "mocha": "^11.7.1",
+    "nyc": "^17.1.0",
+    "typescript": "latest"
+  }
+}
