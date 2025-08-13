@@ -10,9 +10,7 @@ const rU = /[$()*+.?[\\\]^{|}-]/;
  * You should only disable this option if you are escaping regular expressions that will later be consumed by runtimes w/o unicode flag support.
  */
 export function escapeRegexp(str: string, unicodeMode = true) {
-  const r = unicodeMode ? rU : rR;
-
-  const match = r.exec(str);
+  const match = (unicodeMode ? rU : rR).exec(str);
 
   if (match === null) {
     return str;
