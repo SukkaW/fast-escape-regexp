@@ -41,7 +41,7 @@
     "@eslint-sukka/node": "^6.23.1",
     "@istanbuljs/nyc-config-typescript": "^1.0.2",
     "@mitata/counters": "^0.0.8",
-    "@swc-node/register": "^1.10.10",
+    "@swc-node/register": "^1.11.1",
     "@types/escape-regexp": "^0.0.3",
     "@types/lodash.escaperegexp": "^4.1.9",
     "@types/mocha": "^10.0.10",
