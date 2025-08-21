@@ -202,3 +202,19 @@ regex-escape                 383.97 ns/iter 391.35 ns      █
                   5.96 ipc (  1.00% stalls)  99.63% L1 data cache
           1.30k cycles   7.77k instructions  34.00% retired LD/ST (  2.64k)
 ```
+
+## License
+
+[MIT](./LICENSE).
+
+----
+
+**fast-escape-regexp** © [Sukka](https://github.com/SukkaW), Authored and maintained by Sukka with help from contributors ([list](https://github.com/SukkaW/fast-escape-regexp/graphs/contributors)).
+
+> [Personal Website](https://skk.moe) · [Blog](https://blog.skk.moe) · GitHub [@SukkaW](https://github.com/SukkaW) · Telegram Channel [@SukkaChannel](https://t.me/SukkaChannel) · Twitter [@isukkaw](https://twitter.com/isukkaw) · Keybase [@sukka](https://keybase.io/sukka)
+
+<p align="center">
+  <a href="https://github.com/sponsors/SukkaW/">
+    <img src="https://sponsor.cdn.skk.moe/sponsors.svg"/>
+  </a>
+</p>
