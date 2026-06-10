@@ -1,3 +1,8 @@
+allowBuilds:
+  '@swc/core': false
+  hexo-util: false
+  unrs-resolver: true
+
 ignoredBuiltDependencies:
   - unrs-resolver
 
