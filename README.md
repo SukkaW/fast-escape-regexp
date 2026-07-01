@@ -1,6 +1,6 @@
 # fast-escape-regexp
 
-**Fastest** (_2x to 3x faster than other libraries!_), plain JavaScript-based, HTML escaping library for JavaScript, works in all JavaScript Runtime (including browser and Node.js).
+**Fastest** (_2x to 3x faster than other libraries!_), plain JavaScript-based, regexp escaping library for JavaScript, works in all JavaScript Runtime (including browser and Node.js).
 
 ## Installation
 
