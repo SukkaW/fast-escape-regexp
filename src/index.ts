@@ -12,7 +12,7 @@ const rU = /[$()*+.?[\\\]^{|}-]/;
 export function escapeRegexp(str: string, unicodeMode = true) {
   const match = (unicodeMode ? rU : rR).exec(str);
 
-  if (match === null) {
+  if (match === null) { // faster than `!match` because no type conversion
     return str;
   }
 
@@ -57,17 +57,17 @@ export function escapeRegexp(str: string, unicodeMode = true) {
       case 93: // ]
         escape = '\\]';
         break;
+      case 124: // |
+        escape = '\\|';
+        break;
+      case 92: // \
+        escape = '\\\\';
+        break;
       case 123: // {
         escape = '\\{';
         break;
       case 125: // }
         escape = '\\}';
-        break;
-      case 92: // \
-        escape = '\\\\';
-        break;
-      case 124: // |
-        escape = '\\|';
         break;
       case 45: // -
         escape = unicodeEscapeForDash;
