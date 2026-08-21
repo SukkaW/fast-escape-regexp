@@ -1,5 +1,5 @@
-/* eslint-disable @typescript-eslint/no-restricted-imports -- benchmark */
-// eslint-disable-next-line import-x/no-unresolved -- only exist after build
+/* eslint-disable no-restricted-imports -- benchmark */
+
 import { escapeRegexp } from '../dist';
 import { escapeRegExp as hexoUtilEscapeRegExp } from 'hexo-util';
 import escapeStringRegexpSindresorhus from 'escape-string-regexp';

@@ -20,6 +20,7 @@ export function escapeRegexp(str: string, unicodeMode = true) {
   // eslint-disable-next-line sukka/unicorn/prefer-string-raw -- performance
   const unicodeEscapeForDash = unicodeMode ? '\\x2d' : '-';
 
+  // eslint-disable-next-line no-useless-assignment -- v8 type hint
   let escape = '';
   let regexp = '';
 

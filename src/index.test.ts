@@ -16,6 +16,6 @@ describe('escapeRegexp', () => {
   });
 
   it('do not escapes `-` when unicode flag is disabled', () => {
-    expect(escapeRegexp('foo - bar', false)).toEqual(String.raw`foo - bar`);
+    expect(escapeRegexp('foo - bar', false)).toEqual('foo - bar');
   });
 });
